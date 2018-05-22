@@ -1,0 +1,42 @@
+<ion-view title="Task List" hide-back-button="true">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+    <ion-content has-header="true" padding="true">
+        <div class="list">
+               <div ng-if="tasklist.length==0">
+                    <div class="item" style="text-align:center;">
+                        <h2>Nothing To Show.</h2>
+                    </div>
+               </div>
+                <div ng-if="tasklist.length>0">
+                    <div ng-repeat="task in tasklist" class="list card"> 
+                       <div class="item item-divider">
+                        Task Name : {{task.name}}
+                      </div>
+                       <a class="item item-text-wrap" href="#">
+                        <b>Task Description</b> : {{task.task_description__c}}
+                      </a>
+                       <a class="item item-text-wrap" href="#">
+                        <b>Project Type</b> : {{task.project_type__c}}
+                      </a>
+                       <a class="item item-text-wrap" href="#">
+                        <b>Taken Hours</b> : {{task.no_of_hours__c}}
+                      </a>
+                        <a class="item item-text-wrap" href="#">
+                        <b>Manager / Assignee</b> : {{task.manager_name__c}}
+                      </a>
+                    </div>
+                </div>    
+      </div>
+    </ion-content>
+    <style>
+        .item-divider {
+            min-height: 30px;
+            background-color: #003366; !important;
+            color: white; !important;
+            font-weight: bold;
+        }
+    </style>    
+</ion-view>

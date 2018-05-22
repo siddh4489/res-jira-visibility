@@ -1,0 +1,94 @@
+<ion-side-menus>
+    <style>
+        .div1 {
+            float: left;
+            width: 50%;
+            padding-left:14px;
+        }
+              
+        .div2 {
+            float: left;
+            width: 50%;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>   
+    <ion-pane ion-side-menu-content drag-content="false">
+        <ion-nav-bar class="bar bar-status{{user.status || 1}} bar-header nav-title-slide-ios7">
+            <ion-nav-back-button class="button-clear"><i class="icon ion-ios7-arrow-back"></i></ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left" style="padding:12px;">
+ 
+        <ion-content>
+            <h1>Welcome, {{username}}</h1>
+  
+            <ion-list class="top-list">
+                <ion-item nav-clear menu-close ui-sref="app.profile" class="item-icon-left">
+                    <!--<i class="icon ion-arrow-graph-up-right"></i>-->
+                    <i class="icon ion-person-stalker"></i>
+                    Resource view
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.chart" class="item-icon-left">
+                    <i class="icon ion-stats-bars"></i>
+                    Hour Worked
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.chart1" class="item-icon-left">
+                    <i class="icon ion-stats-bars"></i>
+                    Hour Worked / Project
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.task" class="item-icon-left">
+                    <i class="icon ion-document-text"></i>
+                    Task Form
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.tasklist" class="item-icon-left">
+                    <i class="icon ion-ios7-paper"></i>
+                    Task List
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.skillset" class="item-icon-left">
+                    <i class="icon ion-university"></i>
+                    Skill Sets
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.skillsetlist" class="item-icon-left">
+                    <i class="icon ion-ios7-paper"></i>
+                    Team Skill Sets
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="app.logout" class="item-icon-left">
+                    <i class="icon ion-log-out"></i>
+                    Logout
+                </ion-item>
+                
+             
+               <!-- <ion-item nav-clear menu-close ui-sref="app.tasklist" class="item-icon-left">
+                    <i class="icon ion-ios7-paper"></i>
+                    Task List
+                </ion-item>-->
+               <ion-list class="bottom-list">
+                <!--<ion-item nav-clear menu-close ui-sref="app.edit-profile" class="item-icon-left">
+                    <i class="icon ion-person"></i>
+                    My Profile
+                </ion-item>-->
+               
+
+
+                <!--<ion-item nav-clear menu-close ui-sref="app.settings" class="item-icon-left">-->
+                    <!--<i class="icon ion-ios7-gear"></i>-->
+                    <!--Settings-->
+                <!--</ion-item>-->
+
+            </ion-list>
+        
+         
+        </ion-content>
+              
+        </ion-side-menu>
+        
+
+</ion-side-menus>
+

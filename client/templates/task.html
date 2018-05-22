@@ -1,0 +1,62 @@
+<ion-view title="Task Form" hide-back-button="true">
+
+    <ion-nav-buttons side="left">
+        <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+    </ion-nav-buttons>
+
+    <ion-content has-header="true" padding="true">
+        <div class="list list-inset">
+
+            <fieldset>
+		    <legend class="item item-input">Task Form Details <div style="float:right;">Date : <span id="date"></span></div></legend>
+                   <div class=list>
+                    <label class="item item-input">
+                        <input type="text" placeholder="Task Name" ng-model="task.name">
+                    </label>
+                    
+                    <div class="item item-body">
+                        <textarea placeholder="Task Description" rows="5" ng-model="task.desc"></textarea>
+                    </div>
+                    <label class="item item-input">
+                        <input type="number" placeholder="No of Hours" ng-model="task.hours">
+                    </label>
+                    <label class="item">
+                        <!--<input type="text" placeholder="Project Type" ng-model="claim.claimant">-->
+			     <div class="dx-field">
+		                     <div ><div id="project"></div></div>
+	                    </div>
+                    </label>
+                    <label class="item">
+                            <div class="dx-field">
+		                     <div ><div id="manager"></div></div>
+	                    </div>
+                    </label>
+		       <input type="hidden" id="managerid" name="managerid" ng-model="task.managerid">
+		       <input type="hidden" id="projecttype" name="projecttype" ng-model="task.projecttype">   
+	   
+      </fieldset>
+
+        </div>
+      <button class="button button-block button-light" ng-click="submit()">
+                Save
+        </button>
+    </ion-content>
+<style>
+       .button.button-light {
+    border-color: #e6b800;
+    background-color: #e6b800;
+    color: white;
+}
+
+.button.button-light:hover {
+    color: white;
+    text-decoration: none;
+}
+	label {
+        display: inline-block;
+        margin-bottom: 5px;
+        font-weight: 500; !important;
+    }
+	
+</style>
+</ion-view>
